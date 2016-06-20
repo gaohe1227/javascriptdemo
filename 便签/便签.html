@@ -1,0 +1,119 @@
+<!DOCTYPE html >
+<html>
+ <head>
+  <title> webQQ便签系统 </title>
+  <meta   http-equiv="Content-Type"  content="text/html;charset=gbk"/>
+  <meta   name="keywords" content="关键字" />
+  <meta   name="Description" content="描述" /> 
+  <style  type="text/css">
+   *{
+   margin:0;
+   padding:0;
+  }
+  body{
+   background:url('images/76N58PICWsA_1024.jpg') no-repeat top center;font-size:12px;font-family:'微软雅黑'; 
+   margin:0;
+   padding:0;
+ }
+ .desk{ width:150px; background-color:#fff; margin:0px auto; border-radius:10px;position:absolute;display:none;z-index:2;left:0px;top:0px;}
+ .desk ul li{ list-style:none;border-bottom:1px solid  #f00;line-height:35px;padding-left:15px;}
+ .desk ul li:nth-child(6){border-bottom:0}
+ .desk ul li:hover{cursor:pointer;background:#f0c;color:#6f9}
+ .desk ul li:nth-child(1){border-top-left-radius:5px;border-top-right-radius:5px;}
+ .desk ul li:nth-child(6){border-bottom-left-radius:5px;border-bottom-right-radius:5px;}
+ .signbox{ position:absolute;z-index:1;}
+ .signbox .s_list{width:200px;height:200px;position:absolute;}
+ .signbox .s_list .s_content  {width:180px;height:180px;position:absolute;top:12px;left:12px;font-size:12px;overflow:hidden;padding:10px 10px;} 
+ .timer{position:absolute;bottom:15px;right:30px;}
+ </style>
+ </head> 
+ <body>
+  <div class="desk">
+  <ul>
+    <li onclick="new_menu('1')">新建文件</li>
+    <li onclick="new_menu('2')">添加标签</li>
+    <li onclick="new_menu('3')">清除标签</li>
+    <li onclick="new_menu('4')">刷新页面</li>
+    <li onclick="new_menu('5')">更换背景</li>
+    <li onclick="new_menu('6')">注销登陆</li>
+  </ul>  
+  </div>
+  <div class="signbox"></div>
+  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+	/**
+     *屏蔽鼠标右键
+	*/
+	document.oncontextmenu=function(){
+      return false;
+	}
+	/**
+     按下鼠标
+	*/
+	$(document).mousedown(function(e){
+	    var key=e.which;//3.右键;2.鼠标滑轮;1.左键
+		if(key==3){
+            var x=e.clientX;
+			var y=e.clientY; 
+			$(".desk").show().css({left:x,top:y}); 
+		}
+	});
+	$(document).click(function(){
+		$(".desk").hide()
+	
+	})
+
+	function new_menu(i){
+          if(i==2){
+            var left=$(".desk").offset().left;
+			var top=$(".desk").offset().top;
+			var random=Math.floor(Math.random()*3)+1;
+			$(".signbox").append("<div class='s_list' style='left:"+left+"px;top:"+top+"px;'>"+
+			"<img  src='images/"+random+".jpg' alt='便签' width='200' height='200' /> "+
+			"<div class='s_content' contentEditable='true'></div>"+
+			"<p class='timer'><span>3</span>或自动保存</p>"+
+			"</div>");
+          auto_timer();
+		  }
+		  if(i==3){
+		   /**
+            *清空标签
+		   **/
+          $(".s_list").fadeOut(1000);
+		   /**
+           *删除缓存
+		  */
+		  localStorage.removeItem("label");
+
+		  } 
+	}
+	 //自动保存时间
+		var timer=null;
+		function auto_timer(){ 
+          clearInterval(timer);
+		  var count=3;
+		  timer=setInterval(function(){
+		   if(count<=0){
+          count=3;
+		  /**
+           *加入缓存
+		  */
+		  localStorage.setItem("label",$(".signbox").html());
+		   }
+		   $(".timer").find("span").text(count);
+		   count--;
+		  },1000);
+		}
+		/**
+		页面加载时
+		**/
+		$(function(){
+		 var label=localStorage.getItem("label");
+		 if(label!=null){
+          $(".signbox").html(label);
+	      auto_timer(); 
+		 } 
+		});
+	</script>
+ </body>
+</html>

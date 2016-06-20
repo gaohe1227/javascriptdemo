@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<title>托拽</title>
+<style type="text/css">
+#div1 {width: 100px; height: 100px; background: red; position: absolute;}
+</style>
+ 
+<script type="text/javaScript"> 
+window.onload=function(){
+	var div1=document.getElementById("div1");
+ 
+	div1.onmousedown=function(ev){
+		 var ev=ev||event;
+		 var dirLeft=ev.clientX-div1.offsetLeft;//敲击时左边差
+		 var dirTop=ev.clientY-div1.offsetTop;//敲击时左边差
+		 if(div1.setCapture){//设置全局捕获
+		 div1.setCapture();
+		 }
+		 document.onmousemove=function(ev1){
+			 div1.style.left=ev1.clientX-dirLeft+'px';//移动
+			 div1.style.top=ev1.clientY-dirTop+'px';//移动 
+			  if(ev1.clientX<=dirLeft){
+				 div1.style.left=0+'px';
+			 }
+			 if(ev1.clientY<=dirTop){
+				 div1.style.top=0+'px';
+			 }
+			 document.title=document.documentElement.clientWidth+"--"+div1.offsetWidth+"--"+div1.offsetLeft;
+			 if(div1.offsetTop+div1.offsetHeight>=document.documentElement.clientHeight){ 
+				 div1.style.top=document.documentElement.clientHeight-div1.offsetHeight+'px';
+			 }
+			 if(div1.offsetLeft+div1.offsetWidth>=document.documentElement.clientWidth){ 
+				 div1.style.left=document.documentElement.clientWidth-div1.offsetWidth+'px';
+			 }
+		 } 
+		 document.onmouseup = function() {
+			document.onmousemove = document.onmouseup = null;//停止运动
+			if(div1.setCapture){//释放全局捕获
+		    div1.releaseCapture();
+		 }
+		}
+		return false;
+	}
+	
+	
+	
+}
+</script>
+<body>
+111
+<div id="div1"></div>
+    
+</body>
+</html>

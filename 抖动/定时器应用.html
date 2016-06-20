@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>定时器的应用1</title>
+
+<style>
+ 
+#div1 { width:100px; height:100px; background:red; position:absolute; top:50px; left:30px; }
+</style>
+</head>
+<script type="text/javaScript" src="move.js" ></script>
+<body>
+
+<input id="btn1" type="button" value="往下" />
+<input id="btn2" type="button" value="往右" />
+<div id="div1"></div>
+
+<script>
+
+var oBtn1 = document.getElementById('btn1');
+var oBtn2 = document.getElementById('btn2');
+var oDiv = document.getElementById('div1');
+
+oBtn1.onclick = function () { 
+ moveStyle(oDiv,'top',7,600);
+ 
+};
+
+oBtn2.onclick = function () { 
+  moveStyle(oDiv,'left',7,600,a);
+ 
+};
+function a(){
+ 
+}
+ 
+</script>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+  <head>
+   <meta  http-equiv="Content-type" content="text/html;charset=gb2312">
+   <title>图片滚动条</title>
+   <meta name="keywords"  content="关键字、关键词">
+   <meta name="description" content="">
+   <style type="text/css">
+    *{margin:0;padding:0;}
+	body{font-size:12px;font-family:"微软雅黑";color:#666;}
+     .pic{width:1000px;margin:20px auto;border:1px solid red;}
+	 .pic ul li{list-style:none;float:left;background:#fff; margin: 0 0 10px 30px;
+	           box-shadow:0 1px 3px 0 #000;/*图层阴影*/
+	 
+	           }
+     .pic ul li a:hover img{opacity:0.8;filter:alpha(opacity=80);}
+     .pic ul li p{width:288px;height:35px;text-align:center;line-height:35px;	 
+	             box-shadow:0 1px 3px 0 #000;/*图层阴影*/
+	            }
+   </style>
+ </head>
+ <body>
+  <div class="pic">
+  <input type="button" id="loadBut" value="加载">
+   <ul>
+     <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-001.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	 <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-002.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	 <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-003.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	  <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-004.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	  <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-005.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	  <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-006.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	  <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-007.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	  <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-008.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	  <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	 <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	 <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+
+<li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+
+<li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	 <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	 <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	 <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	 <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	 <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+
+<li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	 <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	 <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	 <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	 <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	 <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+
+<li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	 <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+
+<li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	 <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	 <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+
+<li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	 <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	 <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+
+<li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	 <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+	 <li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+
+<li>
+	 <a href="#"><img src="images/dongri_weimei_xuejing-001.jpg" alt="dongri_weimei_xuejing-009.jpg" width="288" height="188"/></a>
+	 <p>dongri_weimei_xuejing-001.jpg</p>
+	 </li>
+   </ul>
+  </div>
+   <script type="text/javascript" src="js/jquery-1.9.1.min.js"> 
+   </script>
+   <script type="text/javascript">
+    var nScrollTop=0;//滚动条距离浏览器最高处的距离
+	 var nScroHeight=0;//滚动条的高度
+	//实现滚动条的加载
+	$(function(){
+	 var nDivHeight=$(window).height();//获取浏览器的高度 
+	 //触发滚动条事件
+	 $(window).scroll(function(){
+	  //获取滚动条的高度
+	   nScroHeight=document.body.scrollHeight||document.documentElement.scrollHeight();
+	   nScrollTop=document.body.scrollTop||document.documentElement.scrollTop();//滚动条距离浏览器最高处的距离
+	   if(nDivHeight+nScrollTop>=nScroHeight){
+appendMessage();
+	   }
+	 })
+	
+	
+	});
+   
+
+
+
+
+
+
+
+
+
+
+  $("#loadBut").click(function(){
+  appendMessage();
+  });
+
+  function appendMessage(){
+  var html=" <li>"+
+	  "<a href='#'><img src='images/1.jpg' alt='dongri_weimei_xuejing-009.jpg' width='288' height='188'/></a>"+
+      " <p>1.jpg</p></li>";
+  $("ul").append(html+html+html);
+
+  }
+   </script>
+ </body>
+
+
+</html>

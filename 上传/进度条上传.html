@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+ <head>
+  <meta http-equiv="Content-type" content="text/html;charset=gb2312">
+  <title>进度条上传</title>
+  <meta name="keywords" content="关键字、关键词">
+  <meta name="description"   content="说明">
+  <style type="text/css">
+    *{margin:0;padding:0;}
+
+	.box{width:960px;height:800px;background:gray;margin:30px auto;}
+	.box h1{text-align:center;text-shadow:2px 5px 10px #111;}
+	.filebox .filein{display:none;}
+	.filebox  .filebtn{margin-left:30px;margin-top:10px;background:#00ff00;width:120px;text-align:center;padding:5px;border-radius:10px;}
+     ul li{list-style:none;float:left;margin-top:30px;margin-left:20px;margin-right:10px;transition:transform 2s ease;}
+	 ul li:hover{transform:scale(2);transition:transform 2s ease;}
+	 ul li img:hover{border:2px solid pink;}
+  </style>
+ </head>
+
+ <body> 
+ <div class="box">
+  <h1>Ajax实现多文件带进度条上传</h1>
+   <div class="filebox">
+      <div class="filebtn" onclick="opnefile()">文件上传</div>
+    
+     <input type="file" multiple="multiple" accept="image/**"  id="_file" class="filein">
+  </div>
+  <ul>
+	  <li><img src="image/19_222949_2.jpg" width="150px" height="150px"> </li>
+	  <li><img src="image/19_222949_3.jpg" width="150px" height="150px"> </li>
+	  <li><img src="image/19_222949_4.jpg" width="150px" height="150px"> </li>
+	  <li><img src="image/19_222949_5.jpg" width="150px" height="150px"> </li>
+	  <li><img src="image/19_222949_6.jpg" width="150px" height="150px"> </li>
+	  <li><img src="image/19_222949_7.jpg" width="150px" height="150px"> </li>
+	  <li><img src="image/19_222949_8.jpg" width="150px" height="150px"> </li>
+	  
+ </div>
+ <script  type="text/javascript">
+ function  opnefile(){
+ var ie=navigator.apppName=="Microsoft Internet Explorer"?true:false; 
+ 
+ if(ie){
+      document.getElementById("_file").click();
+	   document.getElementById("_file").dispatchEvent(fileopen);
+ }else{
+      var fileopen=document.createEvent("MouseEvents");
+	  fileopen.initEvent("click",true,true);
+	  document.getElementById("_file").dispatchEvent(fileopen);
+ } 
+ 
+ }
+ </script>
+  
+ </body>
+</html>

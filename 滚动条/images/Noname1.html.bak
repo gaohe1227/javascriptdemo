@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css">
+  body{background:url('3.jpg') red;background-size:cover;}
+  </style>
+ </head>
+  <img src="1.jpg" />
+ <body>
+  
+ </body>
+</html>

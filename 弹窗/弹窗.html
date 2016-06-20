@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta  http-equiv="Content-Type" content="text/html;charset=gbk" />
+  <title> webQQ弹窗按案例 </title>
+  <meta   name="keywords"  content="关键字、关键词"/>
+  <meta name="description" content="描述" />
+  <style type="text/css">
+  *{margin:0;padding:0}
+  body{background:#666;font-size:12px;font-family:'微软雅黑';}
+ .show{width:700px;height:350px;background:#c9f; border-radius:8px;box-shadow:0 0 50px #000;display:none;position:absolute; margin:auto ;z-index:3; }
+ .btn{width:140px;height:32px;background:#39b2e2;display:block;text-align:center;line-height:32px;text-decoration:none;font-size:14px;
+      border:1px solid #39b2e2;border-radius:30px;margin:100px auto; }
+ .btn:hover{background:#39b2e2;color:#fff}
+ .yy{width:100%;height:100%;background:#000;position:absolute;top:0px;left:0px;z-index:2;display:none;}
+  </style>
+  </head>
+  <body>
+  <a href="#" class="btn">点我弹出来</a>
+   <div class="show">
+   <embed src="http://player.youku.com/player.php/sid/XNDYwOTk0NjE2/v.swf" allowFullScreen="true" quality="high" width="700" height="350" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+   </div>
+   <div class="yy"></div>
+   <script type="text/javascript"src="js/jquery-1.9.1.min.js" ></script>
+   <script type="text/javascript">
+    $(function(){
+	   $(".btn").click(function(){
+	   
+	    var _left=($(window).width()-700)/2+'px';
+	 
+		var _top=($(window).height()-350)/2+'px';
+        $(".show").show().css({left:_left,top:_top });
+	
+	 
+	 /**
+	 *设置透明度
+	 */
+	
+	 
+	 $(".yy").css("opacity","0.3").show(); 
+ 
+	   });
+
+
+
+
+	 $(".yy").click(function(){
+	 
+	  $(".yy").hide();
+	   //$(".show").hide();
+	    var _left=($(window).width()-700)/2+'px';
+		var _top=($(window).height()-350)/2+'px';
+		 /**
+          **执行隐藏动画
+		 **/
+		 
+		$(".show").show().animate({
+		width:"-700px",
+		height:"-350px",
+		left:"-="+_left+"",
+	    top:"-="+_top+""
+		
+		},3000,function(){
+		$(this).css({
+		 width:700,
+		 height:350
+		
+		}).hide();
+		 
+		});
+	 })
+	});
+   </script>
+  </body>
+</head>

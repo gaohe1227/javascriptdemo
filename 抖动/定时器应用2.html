@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<title>下落div</title>
+
+<script src="move.js"></script>
+<script>
+window.onload = function () {
+	var str = '';
+	var len = 20;
+	var aDiv = document.getElementsByTagName('div');
+	var timer = null;
+	var num = 0;
+	
+	for ( var i=0; i<len; i++ ) {
+		str += '<div style="width:50px; height:50px; background:red; position:absolute; top:0px; left:'+ i*60 +'px;"></div>';
+	}
+   document.body.innerHTML = str;
+   document.onclick=function(){
+     clearInterval(timer);
+  var timer=setInterval(function(){ 
+   moveStyle(aDiv[num],'top',7,300);   
+   num++;
+   if(num==len){
+   clearInterval(timer); 
+   var obj=aDiv[num-1];
+   var styleTimer=setInterval(function(){
+    var lenStyle=getStyle(obj,'top'); 
+	if(parseInt(lenStyle)==300){
+	 clearInterval(styleTimer);
+	 num=0;
+      vartopTimer=setInterval(function(){
+	   moveStyle(aDiv[num],'top',7,0);
+	   num++;
+	   if(num==len){
+	   clearInterval(vartopTimer); 
+	   
+	   }
+	  },100);
+	
+	}
+	
+   },100)
+  
+   }
+  
+    },100);
+    
+   }
+   
+   
+};
+</script>
+
+</head>
+
+<body>
+</body>
+</html>
+

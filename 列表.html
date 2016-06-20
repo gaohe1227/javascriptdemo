@@ -1,0 +1,57 @@
+<!doctype html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<title>查询</title>
+<style type="text/css">
+ 
+.search{
+position:relative; 
+width:700px; 
+margin:0px auto; 
+}
+.textin {
+margin-left: 200px; 
+width: 150px;
+padding: 5px 10px; 
+border-radius: 10px;
+height: 30px;
+font-size: 18px;
+font-family: "微软雅黑";
+border: 1px solid #eaeaea;
+outline:none;
+}
+.btn{ 
+width: 150px;
+padding: 5px 10px; 
+border-radius: 10px; 
+font-size: 18px;
+font-family: "微软雅黑";
+background-color:#2196F3;
+text-decoration:none;
+outline:none;
+}
+.btn:hover{
+background-color:gray; 
+cursor:pointer;
+}
+#content{
+position:relative; 
+width:700px;height:350px;
+margin:30px auto;
+background-color:red;
+
+}
+</style>
+</head>
+<body>
+<div class="search">
+ <input type="text" value="${content }" class="textin " contenteditable="true"> <a class="btn">查询</a>
+ </div>
+ <div id="content">
+ <ul>
+<li>Coffee</li>
+<li>Milk</li>
+</ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>滑动门</title>
+		<link rel="stylesheet" href="styles/reset.css" /> 
+		<style>
+        #container{ position:relactive; margin:0 auto;border:1px dashed #3ff;height:477px;overflow:hidden;}
+        #container  img{position:absolute;display:block;float:left;left:0;border-left: 1px solid #ccc;}
+		</style>
+		<script>
+      window.onload=function(){
+       var box=document.getElementById("container");
+       var imgs=box.getElementsByTagName("img");
+	   imgs[0].style.left=0+"px";
+	   var len=imgs.length;
+	   //单张图片的宽度
+	   var imgWidth=imgs[0].offsetWidth;
+	   var boxWidth=imgWidth +(len-1)*exposeWidth+"px";
+       box.style.width=boxWidth;
+	   	//设置掩藏门体露出的宽度
+	    var exposeWidth = 160;
+		//设置每张图片的开始位置
+		function setImgpos(){
+	     for(var i=1;i<len;i++){
+          imgs[i].style.left=imgWidth+(i-1)*exposeWidth +"px"; 
+	   }
+	   }
+	   setImgpos();
+	   //计算每到门打开时应该移动的距离
+	   var translate=imgWidth-exposeWidth;
+	   for(i=0;i<len;i++){
+	   //应用立即调用的函数表达式，为了获取不同的i值
+         (function(i){
+		 imgs[i].onmouseover=function(){
+		        //将每到门复位
+               setImgpos();
+			   //移动门
+			   for(j=1;j<=i;j++){
+                imgs[j].style.left= parseInt(imgs[j].style.left,10)-translate+"px";
+
+			   }
+		 }
+		 
+		 })(i);
+
+	   }
+
+      }
+		</script>
+	</head>
+	<body>
+		<div id='container'>
+			<img src="images/door1.png" alt="1080P神器" title="1080P神器" />
+			<img src="images/door2.png" alt="5.5寸四核" title="5.5寸四核" />
+			<img src="images/door3.png" alt="四核5寸" title="四核5寸" />
+			<img src="images/door4.png" alt="5.7寸机皇" title="5.7寸机皇" />
+		</div>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+
+</head>
+<body>
+ <script type="text/javascript">
+ localStorage.setItem("t","≤‚ ‘");
+  localStorage.setItem("t1","≤‚ ‘1");
+  /**
+  **≈˙¡ø…æ≥˝
+  **/
+ // localStorage.clear();
+  /**
+   **“∆≥˝ƒ⁄»›
+  **/
+  localStorage.removeItem("t1");
+  var t=localStorage.getItem("t");
+  console.log("≤‚ ‘");
+
+  var storages=window.localStorage;
+  var len=storages.length;
+  for(var i=0;i<len;i++){
+    var key=storages.key(i);
+	alert(key+"------"+localStorage.getItem(key))
+  }
+ </script>
+<body>
+
+</html>
